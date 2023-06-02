@@ -1,0 +1,15 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  overflow: hidden;
+  height: 100vh;
+}
