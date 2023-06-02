@@ -96,9 +96,13 @@ class Adaptor {
       this.type === ScaleType.scale
         ? `scale(${this.pageScale.x}, ${this.pageScale.y}) !important`
         : `matrix(${this.pageScale.x}, 0, 0, ${this.pageScale.y}, 0, 0) !important`;
+    const a = `
+        width: ${this.designWidth}px !important;
+      height: ${this.designHeight}px !important;`;
     dom.style.cssText = `
       transform: ${transform};
       transform-origin: 0 0;
+      ${dom === this.dom ? a : ""}
     `;
   };
   private observerDomScaleFn = () => {
