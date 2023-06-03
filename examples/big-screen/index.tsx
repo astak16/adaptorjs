@@ -92,17 +92,17 @@ export default () => {
               <Option value="Yiminghe">yiminghe</Option>
             </Select>
           </SelectStyled>
-          <LineChart style={{ height: 300 }} />
-          <LineChart style={{ height: 300 }} />
-          <LineChart style={{ height: 300 }} />
+          <LineChart style={{ height: 300, width: "450px" }} />
+          <LineChart style={{ height: 300, width: "450px" }} />
+          <LineChart style={{ height: 300, width: "450px" }} />
         </Left>
         <Center>
           <div id="map" />
         </Center>
         <Right>
-          <LineChart style={{ height: 300 }} />
-          <LineChart style={{ height: 300 }} />
-          <LineChart style={{ height: 300 }} />
+          <LineChart style={{ height: 300, width: "450px" }} />
+          <LineChart style={{ height: 300, width: "450px" }} />
+          <LineChart style={{ height: 300, width: "450px" }} />
         </Right>
       </Content>
     </Rooted>
