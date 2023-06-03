@@ -1,6 +1,6 @@
 {
   "name": "adaptorjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "adaptorjs 是一款自适应的大屏工具，适用于 react/vue 等框架",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -55,9 +55,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
     "typescript": "^5.0.4",
-    "vite": "^4.1.0"
-  },
-  "dependencies": {
+    "vite": "^4.1.0",
     "antd": "^5.5.2",
     "dayjs": "^1.11.7",
     "echarts": "^5.4.2",

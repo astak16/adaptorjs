@@ -1,5 +1,4 @@
 import path from "path";
-import fs from "fs";
 import ts from "rollup-plugin-typescript2";
 import cjs from "@rollup/plugin-commonjs";
 import { babel } from "@rollup/plugin-babel";
@@ -14,27 +13,20 @@ function resolvePackagePath(packageName, isDist) {
     : `${packagePath}/${packageName}`;
 }
 
-function getPackageJSON(packageName) {
-  const path = `${resolvePackagePath(packageName)}/package.json`;
-  const str = fs.readFileSync(path, "utf-8");
-  return JSON.parse(str);
-}
-
-const { module } = getPackageJSON("");
 const inputPath = resolvePackagePath("");
 const outputPath = resolvePackagePath("", true);
 
 export default {
-  input: `${inputPath}/${module}`,
+  input: `${inputPath}index.ts`,
   output: {
-    file: `${outputPath}/index.js`,
+    file: `${outputPath}index.js`,
     name: "Adaptor",
     format: "umd",
     exports: "named",
   },
   plugins: [
     ts({
-      tsconfig: "tsconfig.json",
+      tsconfig: "tsconfig.rollup.json",
     }),
     babel({
       exclude: "node_modules/**",

@@ -4,11 +4,17 @@
 
 虽然这种方案并不完美，但也是目前比较好的解决方案
 
-在使用 `scale` 缩放时，主要有 3 个问题
+比如在 pc 上就不是特别完美，特别是老型号 windows 机器，分辨率各种各样
+
+但在大屏上看就会很完美，因为大屏的分辨率一般都是 `16:9` 的，而设计稿一般都是 `1920*1080`
+
+然后在使用 `scale` 缩放时，主要有 3 个问题
 
 1. 地图上的点位会出现偏移/点击位置不准
 2. 使用到 `overflow: scroll` 的地方，文本可能会出现模糊
 3. 在使用第三方组件时，比如下拉框等不会缩放
+
+开发这个组件就是为了解决这 3 个问题
 
 ## 使用
 
@@ -91,6 +97,14 @@ type?: ScaleType; // 缩放类型，可选，默认 scale
 
 ![Jietu20230530-200728-HD.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9555be058447421da9588463b1aef2e4~tplv-k3u1fbpfcp-watermark.image?)
 
-## 开发计划
+## demo
 
-目前只提供了方案一的实现，后续会提供方案二、方案三的实现
+```bash
+git clone https://github.com/astak16/adaptorjs.git
+
+cd adaptorjs
+
+pnpm i
+
+pnpm dev
+```
